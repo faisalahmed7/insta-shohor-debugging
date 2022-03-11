@@ -47,23 +47,26 @@ const switchTab = (id) => {
     document.getElementById("posts").style.display = "grid";
     document.getElementById("liked").style.display = "none";
     document.getElementById("reported").style.display = "none";
+    document.getElementById("bonus-sec").style.display = "block";
   } else if (id === "liked") {
     document.getElementById("liked").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("reported").style.display = "none";
+    document.getElementById("bonus-sec").style.display = "none";
 
     displayLikedPosts();
   } else {
     document.getElementById("reported").style.display = "block";
     document.getElementById("posts").style.display = "none";
     document.getElementById("liked").style.display = "none";
+    document.getElementById("bonus-sec").style.display = "none";
 
     displayReportedPosts();
   }
 };
 
 const createPost = (post) => {
-  console.log(post)
+  // console.log(post)
   const image = post.image;
   const div = document.createElement("article");
   div.classList.add("post");
